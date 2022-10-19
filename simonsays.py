@@ -1,5 +1,6 @@
 from adafruit_circuitplayground import cp
 import time
+import random
 
 Red = (255, 0, 0,)
 Orange = (255, 125, 0)
@@ -69,30 +70,30 @@ def lose():
 
 def win():
     cp.pixels[0] = Red
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[1] = Red
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[2] = Orange
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[3] = Orange
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[4] = Yellow
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[5] = Yellow
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[6] = Green
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[7] = Green
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[8] = Blue
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels[9] = Blue
-    time.sleep(0.5)
+    time.sleep(0.25)
     cp.pixels.fill(Black)
 
 
 round = 0
-sequence = [0, 1, 3, 2, 0]
+sequence = [random.randint(0, 3), random.randint(0, 3), random.randint(0, 3), random.randint(0, 3), random.randint(0, 3)]
 
 while True:
     round += 1
